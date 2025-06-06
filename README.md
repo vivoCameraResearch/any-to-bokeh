@@ -5,8 +5,8 @@
 <a href="http://www.apache.org/licenses/LICENSE-2.0"><img src='https://img.shields.io/badge/License-CC BY--NC--SA--4.0-lightgreen?style=flat&logo=Lisence' alt='License'></a><br>
 
 
-## ✅ To-Do List for MagicTryOn Release
+# ✅ ToDo List for Any-to-Bokeh Release
 
-- [ ] Release the testing files
+- [ ] Release the demo inference files and pre-trained weights
+- [ ] Release the inference pipeline
 - [ ] Release the training files
-- [ ] Release the demo and pre-trained weights
