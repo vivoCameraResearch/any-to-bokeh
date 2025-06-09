@@ -1,0 +1,9 @@
+aif_folder,disp_folder,k
+demo_dataset/videos/soccerball,demo_dataset/disp/soccerball,16
+demo_dataset/videos/breakdance,demo_dataset/disp/breakdance,16
+demo_dataset/videos/dance-twirl,demo_dataset/disp/dance-twirl,16
+demo_dataset/videos/flamingo,demo_dataset/disp/flamingo,8
+demo_dataset/videos/goat,demo_dataset/disp/goat,16
+demo_dataset/videos/swing,demo_dataset/disp/swing,16
+demo_dataset/videos/horsejump-high,demo_dataset/disp/horsejump-high,16
+demo_dataset/videos/dance-jump,demo_dataset/disp/dance-jump,8

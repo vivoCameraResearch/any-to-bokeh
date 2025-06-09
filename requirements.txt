@@ -1,0 +1,10 @@
+diffusers==0.25.0
+noise
+huggingface-hub==0.25.2
+pandas==2.2.3
+numpy==2.1.2
+opencv-python
+transformers==4.32.1
+einops
+imageio[ffmpeg]
+accelerate==1.4.0
