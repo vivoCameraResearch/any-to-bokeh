@@ -28,6 +28,7 @@ import torch.nn.functional as F
 import math
 from PIL import Image
 
+
 def fourier_embedding(x, num_freqs=16, temperature=100):
     device = x.device
     dtype = x.dtype
