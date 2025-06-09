@@ -21,7 +21,7 @@
 ```bash
 conda create -n any2bokeh python=3.10 -y
 conda activate any2bokeh
-# The default CUDA version is 12.4, please modify according to your configuration.
+# The default CUDA version is 12.4, please modify it according to your configuration.
 
 # Install pytorch. 
 pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu124
