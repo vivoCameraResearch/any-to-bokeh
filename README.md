@@ -12,8 +12,9 @@
 
 ## ✅ ToDo List for Any-to-Bokeh Release
 
-- [x] Release the demo inference files and pre-trained weights
+- [x] Release the demo inference files
 - [x] Release the inference pipeline
+- [ ] Release the model weights
 - [ ] Release the training files
 
 ## :wrench: Installation
@@ -32,11 +33,13 @@ cd any2bokeh
 pip install -r requirements.txt
 ```
 
-## ⏬ Demo Inference
+## ⏬ Demo Inference 
 **We obtained 8 demos from DAVIS dataset**
+
+⚠️**Model weights and demo_dataset are still under internal review and are expected to be released in July.**
 1. Download demo data in [google drive]() in ```./demo_dataset``` folder. 
-2. Download the pre-trained weights in in [google drive]() in ```./checkpoints``` folder.
-3. Run the demo script ```python test/inference_demo.py```. The results will save in the ```./output``` folder.
+2. Download the pre-trained weights in [google drive]() in ```./checkpoints``` folder.
+3. Run the demo script ```python test/inference_demo.py```. The results will be saved in the ```./output``` folder.
 
 ## :runner: Inference Custom Video
 Before bokeh rendering, two data preprocessing steps are required.
