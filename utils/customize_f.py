@@ -65,6 +65,7 @@ files = [f for f in os.listdir(ori_disp_path)]
 
 files = sorted(files, key=sort_frames)
 
+# The grayscale value corresponding to the disparity of the focus plane
 focus1 = 234
 focus2 = 139
 focus3 = 31
