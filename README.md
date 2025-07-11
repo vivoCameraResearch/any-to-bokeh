@@ -9,12 +9,16 @@
       📖<strong>TL;DR</strong>: <strong>Any-to-Bokeh</strong> is a novel one-step video bokeh framework that converts arbitrary input videos into temporally coherent, depth-aware bokeh effects.
 </p>
 
+## 📢 News
+
+- **[2025-07-11]** 🎉 We have officially released the model weights for public use!  
+  You can now download the pretrained weights via the [google drive](https://drive.google.com/file/d/11UQcR7-GJtobPNKlF3f-q97xYX9pyEXb/view?usp=sharing).  
 
 ## ✅ ToDo List for Any-to-Bokeh Release
 
 - [x] Release the demo inference files
 - [x] Release the inference pipeline
-- [ ] Release the model weights
+- [x] Release the model weights
 - [ ] Release the training files
 
 ## :wrench: Installation
@@ -36,10 +40,8 @@ pip install -r requirements.txt
 ## ⏬ Demo Inference 
 **We obtained 8 demos from DAVIS dataset**
 
-⚠️**Model weights and demo_dataset are still under internal review and are expected to be released in July.**
-1. Download demo data in [google drive]() in ```./demo_dataset``` folder. 
-2. Download the pre-trained weights in [google drive]() in ```./checkpoints``` folder.
-3. Run the demo script ```python test/inference_demo.py```. The results will be saved in the ```./output``` folder.
+1. Download the pre-trained weights in [google drive](https://drive.google.com/file/d/11UQcR7-GJtobPNKlF3f-q97xYX9pyEXb/view?usp=sharing) in ```./checkpoints``` folder.
+2. Run the demo script ```python test/inference_demo.py```. The results will be saved in the ```./output``` folder.
 
 ## :runner: Inference Custom Video
 Before bokeh rendering, two data preprocessing steps are required.
@@ -64,16 +66,15 @@ python utils/pre_process.py \
 ```
 
 ### Case1: Fixed focus plane
-Write the folder ```aif_folder``` that stores the video frames, the corresponding folder ```disp_folder``` that has been preprocessed, and the value ```k``` representing the intensity of bokeh into a CSV file in the following format (like [demo.csv](csv_file/demo.csv)):
+The folder ```aif_folder``` that stores the video frames, the corresponding folder ```disp_folder``` that has been preprocessed, and the value ```k``` representing the intensity of bokeh into a CSV file in the following format (like [demo.csv](csv_file/demo.csv)):
 
 | aif_folder                    | disp_folder                     | k  |
 |-------------------------------|---------------------------------|----|
 | demo_dataset/videos/xxx | demo_dataset/disp/xxx    | 16 |
-| demo_dataset/videos/xxx | demo_dataset/disp/xxx    | 16 |
 
 Then, run the script 
 ```bash
-python test/inference_demo.py --val_csv_path your-csv-file-path
+python test/inference_demo.py --val_csv_path csv_file/demo.csv
 ```
 
 ### Case2: Changed blur strength
@@ -87,7 +88,7 @@ Next, the CSV configuration for case1 should be updated to the following templat
 
 Then, run the script
 ```bash
-python test/inference_demo.py --val_csv_path csv_file/demo_change_f.csv
+python test/inference_demo.py --val_csv_path csv_file/demo_change_k.csv
 ```
 
 ### Case3: Changed focus plane
@@ -97,7 +98,7 @@ Next, the CSV configuration is the same as in case1 (e.g., [change_f_demo.csv](c
 
 | aif_folder                    | disp_folder                     | k  |
 |-------------------------------|---------------------------------|----|
-| demo_dataset/videos/xxx | demo_dataset/disp_change_f/xxx    | change |
+| demo_dataset/videos/xxx | demo_dataset/disp_change_f/xxx    | 16 |
 
 Then, run the script
 ```bash
