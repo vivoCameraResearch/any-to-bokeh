@@ -10,7 +10,7 @@
 </p>
 
 ## 📢 News
-
+- **[2026-02-01]** 🎇 Our papers are accepted ICLR2026!
 - **[2025-07-11]** 🎉 We have officially released the model weights for public use!  
   You can now download the pretrained weights via the [google drive](https://drive.google.com/file/d/11UQcR7-GJtobPNKlF3f-q97xYX9pyEXb/view?usp=sharing).  
 
@@ -19,7 +19,7 @@
 - [x] Release the demo inference files
 - [x] Release the inference pipeline
 - [x] Release the model weights
-- [ ] Release the training files
+- [x] Release the training files
 
 ## :wrench: Installation
 
@@ -49,7 +49,7 @@ Before bokeh rendering, two data preprocessing steps are required.
 ### Data Preprocessing
 
 #### 1. Get Object Mask.
-We recommend using [SAM2](https://github.com/facebookresearch/sam2) to get the mask of the focusing target.
+We recommend using [Grounded-SAM](https://github.com/IDEA-Research/Grounded-SAM-2) to get the mask of the focusing target. You can generate the mask by adapting the sample code in [any2bokeh_sam.py](any2bokeh_sam.py)
 
 #### 2. Depth Prediction.
 First, split the video into frames, place it in a folder, and use the [utils/script_mp4.py](utils/split_mp4.py).
@@ -105,10 +105,14 @@ Then, run the script
 python test/inference_demo.py --val_csv_path csv_file/demo_change_f.csv
 ```
 
+## :triangular_flag_on_post: Metrics
+We provide the VEPI metric, proposed in the paper, in [edge_batch.py](metrics/edge_batch.py) to assess the model’s ability to preserve detail at the edges of the focused subject. All other metrics can be obtained by running [vid_metrics.py](metrics/vid_metrics.py)
+
 ## 📜 Acknowledgement
 This codebase builds on [SVD_Xtend](https://github.com/pixeli99/SVD_Xtend). Thanks for open-sourcing! Besides, we acknowledge following great open-sourcing projects:
-- SAM2 (https://github.com/facebookresearch/sam2).
-- Video-Depth-Anything (https://github.com/DepthAnything/Video-Depth-Anything).
+- [SAM2](https://github.com/facebookresearch/sam2).
+- [Video-Depth-Anything](https://github.com/DepthAnything/Video-Depth-Anything).
+- [Grounded-SAM-2](https://github.com/IDEA-Research/Grounded-SAM-2)
 
 
 ## 🌏 Citation
