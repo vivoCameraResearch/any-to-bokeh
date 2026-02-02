@@ -1,0 +1,23 @@
+metrics:
+  - type: fvd
+    model:
+      path: ./weights/i3d.pt
+      modeltype: i3d
+    data:
+      dataset:
+        sequence_length: 10
+        resize_shape: [224, 224]
+      batch_size: 4
+      num_workers: 16
+  - type: fvd
+    model:
+      path: ./weights/resnext-101.pth
+      modeltype: resnext
+    data:
+      dataset:
+        sequence_length: 10
+        resize_shape: [224, 224]
+      batch_size: 4
+      num_workers: 16
+
+paths: ["path to unpaired results", "path to VVT test frames (e.g. dataset/VVT/test_frames/*)"]
