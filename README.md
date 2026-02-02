@@ -10,8 +10,8 @@
 </p>
 
 ## 📢 News
-- **[2026-02-01]** 🎇 Our papers are accepted ICLR2026!
-- **[2025-07-11]** 🎉 We have officially released the model weights for public use!  
+- **[2026-02-01]** Our papers are accepted ICLR2026! 🎉 🎉 🎉 
+- **[2025-07-11]** We have officially released the model weights for public use!  
   You can now download the pretrained weights via the [google drive](https://drive.google.com/file/d/11UQcR7-GJtobPNKlF3f-q97xYX9pyEXb/view?usp=sharing).  
 
 ## ✅ ToDo List for Any-to-Bokeh Release
@@ -36,6 +36,8 @@ git clone https://github.com/vivoCameraResearch/any-to-bokeh.git
 cd any2bokeh
 pip install -r requirements.txt
 ```
+## 🔥 Training
+Any-to-Bokeh training is organized into three phases. Simply run the bash scripts for each stage in sequence (see the [training scripts](scripts) directory).
 
 ## ⏬ Demo Inference 
 **We obtained 8 demos from DAVIS dataset**
