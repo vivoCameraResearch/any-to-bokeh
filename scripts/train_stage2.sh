@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=1 accelerate launch --main_process_port=8884 train/train_stage2.py \
+    --pretrained_model_name_or_path='stabilityai/stable-video-diffusion-img2vid-xt' \
+    --pretrain_unet_path='checkpoints/unet' \
+    --csv_path="/data/vjuicefs_ai_camera_jgroup_research/public_data/11179416/code/SVD_Xtend/csv/data_all.csv" \
+    --output_dir="ckpt_final/stage2" \
+    --per_gpu_batch_size=1 \
+    --gradient_accumulation_steps=2 \
+    --num_train_epochs=5 \
+    --width=1024 \
+    --height=576 \
+    --checkpoints_total_limit=200 \
+    --learning_rate=5e-6 \
+    --lr_warmup_steps=0 \
+    --seed=0 \
+    --mixed_precision="fp16" \
+    --checkpointing_steps=10000 \
+    --validation_steps=10000 \
+    --num_frames=8 \
+    --freeze_spacial \
+    --aug_depth \
+    --aug_depth_p=0.5 \
