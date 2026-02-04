@@ -1,4 +1,4 @@
-# [ICLR2026] Any-to-Bokeh: One-Step Video Bokeh via Multi-Plane Image Guided Diffusion
+# [ICLR2026] Any-to-Bokeh: Arbitrary-Subject Video Refocusing with Video Diffusion Model
 
 <a href="https://arxiv.org/abs/2505.21593"><img src='https://img.shields.io/badge/arXiv-2501.11325-red?style=flat&logo=arXiv&logoColor=red' alt='arxiv'></a>&nbsp;
 <a href="https://vivocameraresearch.github.io/any2bokeh/"><img src='https://img.shields.io/badge/Project-Page-Green' alt='page'></a>&nbsp;
